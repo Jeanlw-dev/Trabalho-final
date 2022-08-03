@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:hot="http://www.example.org/hotel">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <hot:HotelOutput>
+         <!--Zero or more repetitions:-->
+         <hot:hotel>
+            <hot:nome>Hotel do Leo</hot:nome>
+            <hot:endComercial>
+               <hot:logradouro>Rua esmeria maria gomes</hot:logradouro>
+               <hot:bairro>Setor Eldorado</hot:bairro>
+               <hot:numero>00</hot:numero>
+               <hot:complemento>?</hot:complemento>
+               <hot:cidade>Inhumas</hot:cidade>
+               <hot:estado>Goias</hot:estado>
+               <hot:cep>75400000</hot:cep>
+            </hot:endComercial>
+         </hot:hotel>
+        <hot:hotel>
+            <hot:nome>Hotel do Leo2</hot:nome>
+            <hot:endComercial>
+               <hot:logradouro>Rua esmeria maria gomes</hot:logradouro>
+               <hot:bairro>Setor Eldorado</hot:bairro>
+               <hot:numero>01</hot:numero>
+               <hot:complemento>?</hot:complemento>
+               <hot:cidade>Inhumas</hot:cidade>
+               <hot:estado>Goias</hot:estado>
+               <hot:cep>75400000</hot:cep>
+            </hot:endComercial>
+         </hot:hotel>
+
+      </hot:HotelOutput>
+   </soapenv:Body>
+</soapenv:Envelope>

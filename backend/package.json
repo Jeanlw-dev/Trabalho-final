@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "express": "^4.18.1",
+    "moment": "^2.29.4",
+    "soap": "^0.45.0"
+  }
+}

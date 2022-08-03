@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.example.org/hotel" 
+xmlns:tns="http://www.example.org/hotel" 
+elementFormDefault="qualified">
+
+<complexType name="HotelQuery">
+    	<sequence>
+    		<element name="cidadeId" type="int"></element>
+    		<element name="dataInicial" type="date"></element>
+    		<element name="dataFinal" type="date"></element>
+    	</sequence>
+    </complexType>
+
+    <complexType name="Hotel">
+	    	<sequence>
+	    		<element name="nome" type="string"></element>
+	    		<element name="endComercial" type="tns:Endereco"></element>
+	    	</sequence>
+    </complexType>
+    
+    <complexType name="HotelList">
+    		<sequence>
+	    		<element name="hotel" type="tns:Hotel" minOccurs="0" maxOccurs="unbounded"></element>
+	    	</sequence>
+    </complexType>
+    
+    <complexType name="Endereco">
+		<sequence>
+			<element name="logradouro" type="string" />
+			<element name="bairro" type="string" />
+			<element name="numero" type="int" />
+			<element name="complemento" type="string" />
+			<element name="cidade" type="string" />
+			<element name="estado">
+				<simpleType>
+					<annotation>
+						<documentation>Relação dos Estados do Endereço.</documentation>
+					</annotation>
+					<restriction base="string">
+						<enumeration value="SC" />
+						<enumeration value="PR" />
+						<enumeration value="RS" />
+						<enumeration value="SP" />
+						<enumeration value="MS" />
+						<enumeration value="MT" />
+						<enumeration value="MG" />
+						<enumeration value="RJ" />
+						<enumeration value="ES" />
+						<enumeration value="BA" />
+						<enumeration value="PE" />
+						<enumeration value="AC" />
+						<enumeration value="AP" />
+						<enumeration value="AM" />
+						<enumeration value="DF" />
+						<enumeration value="GO" />
+						<enumeration value="PI" />
+						<enumeration value="PA" />
+						<enumeration value="RO" />
+						<enumeration value="RR" />
+						<enumeration value="TO" />
+						<enumeration value="AL" />
+						<enumeration value="CE" />
+						<enumeration value="PB" />
+						<enumeration value="RN" />
+						<enumeration value="SE" />
+					</restriction>
+				</simpleType>
+			</element>
+			<element name="cep" type="string" />
+		</sequence>
+	</complexType>
+
+    <element name="HotelInput" type="tns:HotelQuery"></element>
+    
+    <element name="HotelOutput" type="tns:HotelList"></element>
+
+</schema>
